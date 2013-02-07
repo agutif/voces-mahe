@@ -25,4 +25,10 @@ public class VocesDelMahe extends Activity {
 				R.raw.gato);
 		reproSonido.start();
 	}
+	
+	public void voz2(View v) {
+		MediaPlayer reproSonido = MediaPlayer.create(VocesDelMahe.this,
+				R.raw.sms);
+		reproSonido.start();
+	}
 }
