@@ -21,6 +21,7 @@
         android:layout_alignBaseline="@+id/button1"
         android:layout_alignBottom="@+id/button1"
         android:layout_centerHorizontal="true"
+        android:background="@raw/fondo"
         android:onClick="voz2"
         android:text="Prueba boton" />
 
