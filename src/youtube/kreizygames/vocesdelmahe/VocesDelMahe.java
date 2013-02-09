@@ -8,6 +8,8 @@ import android.view.View;
 
 public class VocesDelMahe extends Activity {
 
+	private MediaPlayer reproSonido;
+	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -20,17 +22,22 @@ public class VocesDelMahe extends Activity {
 		return true;
 	}
 
-	public void voz1(View v) {
-		MediaPlayer reproSonido = MediaPlayer.create(VocesDelMahe.this,
-				R.raw.gato);
+	public void sonido(View v) {
 		reproSonido.stop();
+		reproSonido = seleccionSonido(v);
 		reproSonido.start();
 	}
 	
-	public void voz2(View v) {
-		MediaPlayer reproSonido = MediaPlayer.create(VocesDelMahe.this,
-				R.raw.sms);
-		reproSonido.stop();
-		reproSonido.start();
+	private MediaPlayer seleccionSonido(View v){
+		MediaPlayer sonido = null;
+		switch (v.getId()) {
+		case R.id.gato:
+			sonido = MediaPlayer.create(VocesDelMahe.this,R.raw.gato);
+			break;
+		case R.id.sms:
+			sonido = MediaPlayer.create(VocesDelMahe.this,R.raw.sms);
+			break;
+		}
+		return reproSonido;
 	}
 }
