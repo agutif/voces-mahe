@@ -38,6 +38,6 @@ public class VocesDelMahe extends Activity {
 			sonido = MediaPlayer.create(VocesDelMahe.this,R.raw.sms);
 			break;
 		}
-		return reproSonido;
+		return sonido;
 	}
 }
