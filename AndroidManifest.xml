@@ -13,7 +13,7 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name=".VocesDelMahe"
-            android:label="@string/title_activity_voces_del_mahe" >
+            android:label="@string/title_activity_voces_del_mahe" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
