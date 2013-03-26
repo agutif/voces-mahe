@@ -4,24 +4,12 @@
     android:layout_height="match_parent" >
 
     <Button
-        android:id="@+id/gato"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="18dp"
-        android:onClick="sonido"
-        android:text="Button" />
-
-    <Button
         android:id="@+id/sms"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/gato"
-        android:layout_alignBottom="@+id/gato"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="38dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
         android:background="@raw/fondo"
         android:onClick="sonido"
         android:text="Prueba boton" />
