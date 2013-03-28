@@ -1,6 +1,5 @@
 package youtube.kreizygames.vocesdelmahe;
 
-import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -8,8 +7,6 @@ import android.view.Menu;
 import android.view.View;
 
 public class VocesDelMahe extends Activity {
-
-	private MediaPlayer reproSonido;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -24,26 +21,7 @@ public class VocesDelMahe extends Activity {
 	}
 
 	public void sonido(View v) {
-		try {
-			reproSonido.stop();
-		} catch (NullPointerException e) {
-		}
-		reproSonido = seleccionSonido(v);
-		//reproSonido.start();
-	}
-
-	private MediaPlayer seleccionSonido(View v) {
-		MediaPlayer sonido = null;
-		switch (v.getId()) {
-		/*case R.id.gato:
-			sonido = MediaPlayer.create(VocesDelMahe.this, R.raw.gato);
-			break;*/
-		case R.id.sms:
-			//sonido = MediaPlayer.create(VocesDelMahe.this, R.raw.sms);
-			Intent maleta = new Intent(this, ListaSonidos.class);
-			startActivity(maleta);
-			break;
-		}
-		return sonido;
+		Intent maleta = new Intent(this, ListaSonidos.class);
+		startActivity(maleta);
 	}
 }
